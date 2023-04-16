@@ -10,9 +10,7 @@ interface Post {
   body: string;
 }
 
-interface UserWithPosts extends User {
-  posts: Array<Post>,
-}
+type UserWithPosts = User & { posts: Post[] }
 
 /**
  * How do we type this return statement so it's both
